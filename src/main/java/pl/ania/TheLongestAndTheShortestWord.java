@@ -2,6 +2,7 @@ package pl.ania;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.StringJoiner;
 
 public class TheLongestAndTheShortestWord {
 
@@ -23,6 +24,27 @@ public class TheLongestAndTheShortestWord {
         return longWords;
 
     }
+
+    public String readTheShortestWordStreamS(List<String> list) {
+
+        return list.stream()
+            .filter(str -> !str.isEmpty())
+            .reduce("kfdfdgdgdgdf", (word1, word2) ->
+            {
+                if (word2.length() < word1.length()) return word2;
+                return word1;
+            });
+    }
+
+
+//    }
+    // jak zrobić zeby zwracało listę najkrótszych wyrazów?
+    // jak zrobić zeby nie zwracało spacji jako najktrótszego wyrazu?
+
+
+
+
+
 
     public List<String> readTheShortestWord(List<String> list) {
         List<String> shortWords = new ArrayList<>();

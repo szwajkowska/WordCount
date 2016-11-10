@@ -5,10 +5,10 @@ import java.util.List;
 
 public class Median {
 
-    MyComparator compalator = new MyComparator();
+    MyComparator comparator = new MyComparator();
 
     public double countMedian(List<String> list) {
-        Collections.sort(list, compalator);
+        Collections.sort(list, comparator);
         int middle = list.size()/2;
         if (list.size()%2 == 1){
             return list.get(middle).length();
